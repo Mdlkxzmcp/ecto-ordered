@@ -31,7 +31,6 @@ defmodule EctoOrdered do
 
   Note the `delete` function used to ensure that the remaining items are repositioned on
   deletion.
-
   """
 
   defstruct repo: nil,
@@ -132,7 +131,6 @@ defmodule EctoOrdered do
 
   defp increment_position(
          %Order{
-           repo: r,
            module: module,
            field: field,
            scope: scope,
