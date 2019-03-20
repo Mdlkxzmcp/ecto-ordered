@@ -2,7 +2,7 @@ EctoOrdered
 ===========
 
 Ecto extension to support ordered list items. Similar to [acts_as_list](https://github.com/swanandp/acts_as_list), but
-for [Ecto](https://github.com/elixir-lang/ecto)
+for [Ecto](https://github.com/elixir-lang/ecto). _Requires Elixir ≥ 1.4_
 
 Examples
 --------
