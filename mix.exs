@@ -2,21 +2,22 @@ defmodule EctoOrdered.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :ecto_ordered,
-     version: "0.0.2",
-     elixir: "~> 1.0",
-     description: "Ecto extension to support ordered list models",
-     package: package(),
-     deps: deps()]
+    [
+      app: :ecto_ordered,
+      version: "0.0.2",
+      elixir: "~> 1.0",
+      description: "Ecto extension to support ordered list models",
+      package: package(),
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger] ++ app_list(Mix.env)]
+    [applications: [:logger] ++ app_list(Mix.env())]
   end
-
 
   defp app_list(:test) do
     [:ecto, :postgrex]
@@ -37,8 +38,8 @@ defmodule EctoOrdered.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-     {:ecto, "~> 2.1"},
-     {:postgrex, "~> 0.13.0", only: :test},
+      {:ecto, "~> 2.1"},
+      {:postgrex, "~> 0.13.0", only: :test}
     ]
   end
 

@@ -3,14 +3,14 @@ defmodule EctoOrderedTest.Migrations do
 
   def change do
     create table(:model) do
-      add :title, :string
-      add :position, :integer
+      add(:title, :string)
+      add(:position, :integer)
     end
 
     create table(:scoped_model) do
-      add :title, :string
-      add :scope, :integer
-      add :scoped_position, :integer
+      add(:title, :string)
+      add(:scope, :integer)
+      add(:scoped_position, :integer)
     end
   end
 end
