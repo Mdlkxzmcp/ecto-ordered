@@ -8,19 +8,20 @@ defmodule EctoOrdered do
   defmodule OrderedListItem do
     use Ecto.Schema
     import Ecto.Changeset
+    import EctoOrdered
 
     schema "ordered_list_item" do
       field :title,            :string
       field :position,         :integer
     end
 
-    def changeset(model, params) do
+    def changeset(%__MODULE__{} = model, params) do
       model
       |> cast(params, [:position, :title])
       |> set_order(:position)
     end
 
-    def delete(model) do
+    def delete(%__MODULE__{} = model) do
       model
       |> cast(%{}, [])
       |> Map.put(:action, :delete)
