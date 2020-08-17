@@ -10,7 +10,7 @@ Add the latest stable release to your mix.exs file:
 ```elixir
 defp deps do
   [
-    {:ecto_ordered, github: "Mdlkxzmcp/ecto-ordered"}
+    {:ecto_ordered, github: "mdlkxzmcp/ecto_ordered"}
   ]
 end
 ```
